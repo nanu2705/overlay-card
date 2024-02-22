@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+
+<style>
+.real-box{
+height: 300px;
+width: 250px;
+background-color: blue;
+position:relative;
+margin: 200px 500px;
+ 
+}
+
+
+
+.overlayr{
+
+background-color: #bb41b5;
+overflow: hidden;
+width: 0;
+height: 100%;
+transition: width 0.7s;
+position: absolute;
+right: 0;
+left: 100%;
+}
+
+.overlayl{
+    background-color: rgba(17, 51, 82, 0.774);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: width 0.7s;
+    position: absolute;
+    left: 100;
+    right:100%;
+}
+
+
+
+.real-box:hover .overlayr{
+width: 100%;
+}
+
+.real-box:hover .overlayl{
+width: 100%;
+}
+
+button{
+    margin: 100px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+</style>
+<body>
+<div class="real-box">
+
+      
+    
+<div class="overlayl">
+<button>Left</button>
+</div>
+
+<div class="overlayr">
+    <button>Right</button>
+</div>
+   
+</div>
+</body>
+</html>
